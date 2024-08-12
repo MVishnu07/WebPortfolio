@@ -1,0 +1,127 @@
+/* Styling for the header section */
+header {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    padding: 40px 0;
+    color: #FAF6F0;
+    text-align: center;
+    background-color: #000000;
+}
+
+/* Styling for the entire body of the page */
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FAF6F0;
+}
+
+/* Styling for the top navigation bar */
+.topnav {
+    overflow: hidden;
+    background-color: #000000;
+    text-align: right;
+    padding-right: 20px;
+}
+
+/* Styling for links in the top navigation bar */
+.topnav a {
+    float: none;
+    display: inline-block;
+    color: #FAF6F0;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Hover effect for links in the top navigation bar */
+.topnav a:hover {
+    background-color: #F4DFC8;
+    color: #000000;
+}
+
+/* Styling for the active link in the top navigation bar */
+.topnav a.active {
+    background-color: #F4DFC8;
+    color: #000000;
+}
+
+/* Clearfix to clear floated columns */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Styling for the footer section */
+footer {
+    background-color: #000000;
+    color: #FAF6F0;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Styling for the content section */
+.content {
+    display: flex;
+    justify-content: flex-start;
+    /* Align content to the left */
+    align-items: center;
+    /* Center content vertically */
+    height: 100vh;
+    /* Full viewport height */
+    background-color: #FAF6F0;
+    /* Background color */
+}
+
+/* Styling for the name container */
+.name-container {
+    padding-left: 50px;
+    /* Add some padding to the left */
+    font-size: 2em;
+    /* Font size */
+    color: #000000;
+    /* Font color */
+    font-family: 'Courier New', Courier, monospace;
+    /* Monospace font for typing effect */
+}
+
+/* Typing animation */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: #000000;
+    }
+}
+
+#typed-name {
+    overflow: hidden;
+    /* Ensures the text is hidden */
+    border-right: .15em solid #000000;
+    /* The caret */
+    white-space: nowrap;
+    /* Prevents the text from wrapping */
+    margin: 0 auto;
+    /* Keeps the text centered */
+    letter-spacing: .15em;
+    /* Adjust as needed */
+    animation:
+        typing 3.5s steps(40, end),
+        blink-caret .75s step-end infinite;
+}
