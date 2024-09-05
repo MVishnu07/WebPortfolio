@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <div class="topnav">
+        <a class="active" href="#Home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+    </div>
+
+    <div id="Home" class="content">
+        <div class="profile-pic">
+            <img src="profile_pic.JPG" alt="Profile Picture" />
+        </div>
+        <div class="name-container">
+            <p><strong>Hii There,</strong></p>
+            <strong><span id="typed-name"></span></strong>
+            <p class="sub-section">Student At Algonquin College</p>
+        </div>
+    </div>
+
+    <section id="about" class="reveal full-width-container">
+        <h2>About Me</h2>
+        <p>Innovative tech enthusiast with a passion for turning data into actionable insights and solutions. Bringing
+            a unique blend of programming prowess, database expertise, and IT support skills, I excel at unraveling
+            complex challenges and driving efficiency. Proficient in Java, SQL, and cutting-edge analytics tools like
+            Tableau and Power BI, I thrive in environments that demand both technical acumen and creative
+            problem-solving. I am poised to contribute meaningfully to projects that require precision, teamwork, and
+            forward-thinking strategies. </p>
+    </section>
+
+    <section id="skills" class="reveal">
+        <h2>Skills</h2>
+        <ul>
+            <li>Programming Languages: Java, HTML, CSS, JavaScript, Python, SQL, R</li>
+            <li>Tools: MS Excel, MS Office, PowerBI, Tableau, Android Studio, Visual Studio, Eclipse</li>
+            <li>Interpersonal Skills: Communication, Teamwork, Attention to Detail, Adaptability, Effective Listening
+            </li>
+            <li>Management Skills: Data Analysis, Decision-Making, Critical Thinking</li>
+        </ul>
+
+    </section>
+
+    <section id="education" class="reveal full-width-container">
+        <h2>Education</h2>
+        <div class="education-item">
+            <div class="degree">
+                <h3>Bachelor of Technology in Business Systems Development</h3>
+                <p>Algonquin College</p>
+                <p>Ottawa, ON</p>
+            </div>
+            <div class="details">
+                <p>September, 2022 - Present</p>
+            </div>
+        </div>
+
+        <div class="education-item">
+            <div class="degree">
+                <h3>Certificate in Data Science with Artificial Intelligence</h3>
+                <p>Upgrad Campus</p>
+            </div>
+            <div class="details">
+                <p>April, 2022 - September, 2022</p>
+            </div>
+        </div>
+        <div class="education-item">
+            <div class="degree">
+                <h3>Google Data Analytics Professional Certificate</h3>
+                <p>Coursera</p>
+            </div>
+            <div class="details">
+                <p>June, 2024 - August, 2024</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2>Experience</h2>
+        <div class="experience-item">
+            <div class="role">
+                <h3>Process Guide</h3>
+                <p>Amazon Fulfillment Centre | Ottawa, ON</p>
+                <ul>
+                    <li>Analyze package volume data to optimize staffing, trailer allocation, and loading priorities,
+                        boosting efficiency and productivity.</li>
+                    <li>Inspected packages and oversaw damage rectification, ensuring quality standards and enhancing
+                        customer satisfaction.</li>
+                    <li>Giving clear instructions and guidance to consistently achieve daily volume targets, fostering
+                        teamwork and enhancing collaboration.
+                    </li>
+                </ul>
+            </div>
+            <div class="details">
+                <p>November 2022 - Present</p>
+            </div>
+        </div>
+
+        <div class="experience-item">
+            <div class="role">
+                <h3>Associate</h3>
+                <p>Real Candaian Superstore | Ottawa, ON</p>
+                <ul>
+                    <li>Managed meat stock deliveries, ensuring freshness and hygiene in meat section.</li>
+                    <li>Improved customer satisfaction and convenience through timely product stocking and pricing to
+                        meet customer needs.
+                    </li>
+                </ul>
+            </div>
+            <div class="details">
+                <p>October, 2022 - November, 2022</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="reveal full-width-container">
+        <h2>Projects</h2>
+        <div class="project-item">
+            <div class="project">
+                <h3>Hospital Triage App</h3>
+                <p>Tools: HTML, CSS, JavaScript,, MySQL, Node.js</p>
+                <ul>
+                    <li>Built a web app to manage emergency room wait times, allowing triage staff to prioritize
+                        patients
+                        by severity and time in queue.</li>
+                    <li>Connected to a database for storing patient information and login details.</li>
+                    <li>Integrated Node.js for server-side processing and JavaScript for responsive client-side
+                        interactions.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="project-item">
+            <div class="project">
+                <h3>Financial Behaviours and Housing Situations Analysis</h3>
+                <p>Tools: Excel, MySQL, Power BI</p>
+                <ul>
+                    <li>Analyzed survey data to explore financial behaviours, housing situations, and financial
+                        knowledge.
+                    </li>
+                    <li>Developed a relational database in SQL for efficient data management and querying.
+                    </li>
+                    <li>Created interactive Power BI dashboards to visualize key insights and correlations.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="project-item">
+            <div class="project">
+                <h3>USA State Snap Quiz - Mobile Game App</h3>
+                <p>Tools: Android Studio, GitHub, Java, SQL Lite</p>
+                <ul>
+                    <li>Developed a mobile game that challenges users to guess US states from images and capitals,
+                        integrating features such as score tracking, game statistics, and replay functionality.
+                    </li>
+                    <li>Managed version control and collaboration using GitHub, actively handling branches, commits, and
+                        merges for efficient team coordination.
+                    </li>
+                    <li>Implemented key functionalities including score storage with SharedPreferences or SQLite,
+                        multi-language support, and responsive design, ensuring thorough documentation and adherence to
+                        project requirements.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <h2>Contact Info:</h2>
+        <p><strong>Phone:</strong> +1 3435586042</p>
+        <p><strong>Email:</strong> <a href="mailto:vishnuvar.7403@gmail.com">vishnuvar.7403@gmail.com</a></p>
+        <p>170 Lees Avenue, Ottawa, ON K1S 5G5</p>
+    </footer>
+</body>
+
+</html>
