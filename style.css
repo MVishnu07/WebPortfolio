@@ -1,3 +1,4 @@
+/* Header styling */
 header {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin: 0;
@@ -15,6 +16,7 @@ body {
     background-color: #FAF6F0;
 }
 
+/* Profile picture styling */
 .profile-pic {
     padding-left: 50px;
     /* Padding to the right */
@@ -22,7 +24,6 @@ body {
 
 .profile-pic img {
     width: 250px;
-    /* Adjust size as needed */
     height: 300px;
     border-radius: 50%;
     /* Circular image */
@@ -30,12 +31,12 @@ body {
     margin-left: 20px;
 }
 
-
+/* Sub-section text styling */
 .sub-section {
     font-size: 20pt;
 }
 
-/* Styling for the top navigation bar */
+/* Top navigation bar styling */
 .topnav {
     overflow: hidden;
     background-color: #000000;
@@ -73,7 +74,7 @@ body {
     display: table;
 }
 
-
+/* Full-width container styling */
 .full-width-container {
     width: 100%;
     background-color: #F4DFC8;
@@ -81,11 +82,13 @@ body {
     box-sizing: border-box;
 }
 
+/* About section text alignment */
 #about h2,
 #about p {
     text-align: center;
 }
 
+/* Container styling for content sections */
 .container {
     background-color: #F4DFC8;
     padding: 10px;
@@ -108,11 +111,10 @@ body {
     font-size: 1.2em;
 }
 
-/* Responsive design: For smaller screens, stack the sections vertically */
+/* Responsive design for smaller screens */
 @media screen and (max-width: 768px) {
     #grid-container {
         grid-template-columns: 1fr;
-        /* Single column on small screens */
     }
 
     .left-side,
@@ -121,7 +123,7 @@ body {
     }
 }
 
-/* Styling for the footer section */
+/* Footer styling */
 footer {
     background-color: #000000;
     color: #FAF6F0;
@@ -129,32 +131,23 @@ footer {
     padding: 10px 0;
 }
 
-/* Styling for the content section */
+/* Content section styling */
 .content {
     display: flex;
     justify-content: flex-start;
-    /* Align content to the left */
     align-items: center;
-    /* Center content vertically */
     height: 100vh;
-    /* Full viewport height */
     background-color: #FAF6F0;
-    /* Background color */
 }
 
-/* Styling for the name container */
 .name-container {
     padding-left: 50px;
-    /* Add some padding to the left */
     font-size: 30pt;
-    /* Font size */
     color: #000000;
-    /* Font color */
     font-family: 'Courier New', Courier, monospace;
-    /* Monospace font for typing effect */
 }
 
-/* Typing animation */
+/* Typing animation styles */
 @keyframes typing {
     from {
         width: 0;
@@ -179,20 +172,16 @@ footer {
 
 #typed-name {
     overflow: hidden;
-    /* Ensures the text is hidden */
     border-right: .15em solid #000000;
-    /* The caret */
     white-space: nowrap;
-    /* Prevents the text from wrapping */
     margin: 0 auto;
-    /* Keeps the text centered */
     letter-spacing: .15em;
-    /* Adjust as needed */
     animation:
         typing 3.5s steps(40, end),
         blink-caret .75s step-end infinite;
 }
 
+/* General section styling */
 section {
     padding: 20px;
     margin: 0 auto;
@@ -223,13 +212,7 @@ section ul li h3 {
     color: #000000;
 }
 
-/* Responsive design adjustments */
-@media screen and (max-width: 768px) {
-    section {
-        margin: 0 5%;
-    }
-}
-
+/* Reveal effect styling */
 .reveal {
     opacity: 0;
     transform: translateY(100px);
@@ -241,18 +224,10 @@ section ul li h3 {
     transform: translateY(0);
 }
 
-/* 
-.education-container {
-    width: 98%;
-    background-color: #F4DFC8;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 20px auto;
-} */
-
-/* Styling for individual education items */
-.education-item {
+/* Styling for individual education, project, and experience items */
+.education-item,
+.project-item,
+.experience-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -265,88 +240,16 @@ section ul li h3 {
 }
 
 /* Styling for the degree and details columns */
-.degree h3 {
-    font-size: 1.5em;
-    margin: 0;
-    color: #000000;
-}
-
-.degree p {
-    font-size: 1.1em;
-    color: black;
-}
-
-.details p {
-    font-size: 1.1em;
-    color: #333;
-    text-align: right;
-
-}
-
-/* Responsive design for smaller screens */
-@media screen and (max-width: 768px) {
-    .education-item {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .details {
-        text-align: left;
-        margin-top: 10px;
-    }
-}
-
-/* Styling for individual experience items */
-.experience-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    border-left: 5px solid #8f8e8c;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* Styling for the role and details columns */
-.role h3 {
-    font-size: 1.5em;
-    margin: 0;
-    color: #000000;
-}
-
-.role p {
-    font-size: 1.1em;
-    color: black;
-}
-
-.details p {
-    font-size: 1.1em;
-    color: #333;
-    text-align: right;
-}
-
-/* Styling for individual project items */
-.project-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #FAF6F0;
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    border-left: 5px solid #8f8e8c;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* Styling for the project and details columns */
+.degree h3,
+.role h3,
 .project h3 {
     font-size: 1.5em;
     margin: 0;
     color: #000000;
 }
 
+.degree p,
+.role p,
 .project p {
     font-size: 1.1em;
     color: black;
@@ -360,15 +263,55 @@ section ul li h3 {
 
 /* Responsive design for smaller screens */
 @media screen and (max-width: 768px) {
+    .topnav a {
+        font-size: 14px;
+        /* Further reduced font size */
+        padding: 10px;
+        /* Adjust padding */
+    }
 
+    .profile-pic img {
+        width: 120px;
+        /* Further reduced size */
+        height: 120px;
+    }
+
+    .name-container {
+        padding-left: 10px;
+        /* Further reduced padding */
+        font-size: 20px;
+        /* Further reduced font size */
+    }
+
+    .content {
+        padding: 10px;
+        /* Reduced padding */
+    }
+
+    .education-item,
     .experience-item,
     .project-item {
         flex-direction: column;
+        /* Stack items vertically */
         align-items: flex-start;
+        /* Align items to the start */
     }
 
-    .details {
+    .education-item .details,
+    .experience-item .details,
+    .project-item .details {
         text-align: left;
+        /* Align text to the left */
         margin-top: 10px;
+        /* Margin for spacing */
+    }
+
+    .container {
+        padding: 10px;
+        /* Reduced padding */
+    }
+
+    section {
+        margin: 0 5%;
     }
 }
