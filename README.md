@@ -1,44 +1,124 @@
-# Vishnu Malkapuram's Portfolio Design Documentation:
+# Vishnu Malkapuram's Portfolio — Design Documentation
 
-A clear and simplified summary of the design system applied for the portfolio project is provided in this documentation. The design is clearly communicated through the use of colours, typography, components, and layouts as well as screenshots of mock-ups.
+A clear and simplified summary of the design system applied for this portfolio project. The design communicates a minimalistic, dark developer aesthetic through the use of colours, typography, components, and layout.
 
-## **1. Color Palette:**
-I used a constant color pallette throughout the portfolio. I used a royal blue + crown yellow color palette.
-- **Primary Color:** `I have used a mix of royal blue and crown yellow color as a color palette for my portfolio.(#003f88,#e8b707)`
-- **Text Color in header, footer and navigation bar:** `#ffffff`
-- **Text Color in the body:** `#000000`
-- **Border Color for the image:** `#fdc500`
-- **Background Color for the body:** `#e7e2e2`
-- **Background Color for the containers:** `#f4ecec`
-(Background color for the body and the container defer very slightly so that there is a distinction between these two elements.)
-- **Accent Color:** `#015bb0`
+---
 
-## **2. Typography**
-- **Body Text:** `Georgia, "Times New Roman", Times, serif`
-- **Header text and Footer text:** `'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif`
+## 1. Color Palette
 
-## **3. Components and Layout**
-### Header
-- **Design:** The header background is created using a linear gradient. It starts with a deep blue color (#003f88) at the top and transitions to a lighter blue color (#015bb0) at the bottom..
-- **Mock-up Screenshot:**
-![Header Mock-up](header.png)
-### Navigation
-- **Design:** The navigation bar is designed with a bright yellow background and light grey text links that are oriented horizontally.
-- **Mock-up Screenshot:**
-![Nav Mock-up](navigation.png)
+A dark monochrome base with a single purple accent color is used consistently throughout the portfolio. This creates a focused, modern look without visual clutter.
 
-### Content
-- **Design:** The layout design for the main content is column based layout where I created 2 columns that has an equal width, centered alignment, and a gap of 10% between them. And within the columns are containers that have a maximum width, centered alignment, and a box shadow to give good visual effect. The containers carry the main content with a background color of #f4ecec.
-- **Mock-up Screenshot:**
-![Content Mock-up](content.png)
+| Role | Color | Hex |
+|---|---|---|
+| Page Background | Near black | `#0d0d0d` |
+| Card / Section Background | Dark grey | `#111111` |
+| Chip / Tag Background | Dark charcoal | `#161616` |
+| Primary Text (headings) | Warm off-white | `#f0ede6` |
+| Secondary Text (body) | Light grey | `#e8e6e0` |
+| Muted Text (descriptions) | Medium grey | `#666666` |
+| Accent / Highlight Color | Soft purple | `#7C6FCD` |
+| Accent Background (tags) | Deep purple tint | `#1a1730` |
+| Border Color (default) | Subtle dark | `#222222` |
+| Border Color (hover) | Purple | `#7C6FCD` |
+
+---
+
+## 2. Typography
+
+Two typefaces are used, each serving a distinct role.
+
+- **Body & Headings:** `Space Grotesk` (weights: 300, 400, 500, 600)
+  - Used for all readable content — name, descriptions, bullet points, and section content.
+  - Chosen for its clean, geometric quality that feels technical but approachable.
+
+- **Labels, Tags & Code-style Text:** `Space Mono` (weights: 400, 700)
+  - Used for section labels, skill chips, dates, contact links, and the `// portfolio` tag.
+  - Gives the portfolio a developer/terminal aesthetic without being overdesigned.
+
+Both fonts are loaded via Google Fonts.
+
+---
+
+## 3. Icons
+
+Icons are sourced from the **Tabler Icons** webfont library, loaded via CDN:
+
+```
+https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css
+```
+
+Icons used: `ti-mail`, `ti-phone`, `ti-brand-linkedin`, `ti-brand-github`, `ti-world`
+
+---
+
+## 4. Components & Layout
+
+### Overall Layout
+- Single-column, centered layout with a `max-width` of `860px`.
+- All sections share consistent horizontal padding of `2rem`.
+- Sections are stacked vertically with a `padding-top` of `2.5rem` between them.
+
+---
+
+### Hero Section
+- **Design:** Full-width top section with the name displayed in a large, responsive heading using `clamp(2rem, 5vw, 3.2rem)`. The first name appears in off-white and the last name in the purple accent color. A small `// portfolio` label in monospace sits above the name as a developer-style tag. Contact links are arranged horizontally in a flex row below the subtitle.
+- **Border:** A 0.5px bottom border in `#2a2a2a` separates the hero from the rest of the page.
+
+---
+
+### Section Labels
+- **Design:** Each section is introduced by a small all-caps monospace label in `#555`. A thin horizontal line extends from the label to the right edge, acting as a visual divider. This keeps the layout clean while clearly separating content areas.
+
+---
+
+### Skills
+- **Design:** A responsive CSS grid of skill chips. Each chip has a dark background (`#161616`), a subtle border, and monospace text. On hover, the border and text shift to the purple accent color, providing subtle interactivity.
+
+---
+
+### Projects
+- **Design:** A responsive two-column card grid. Each card has a dark background (`#111`), a thin border, and a hover effect that highlights the border in purple. Cards contain a title, a short description, and a row of technology tags styled in purple on a deep purple tint background.
+
+---
+
+### Experience
+- **Design:** A vertical timeline layout using a left border line in `#222`. Each entry has a small purple dot on the left border to mark the position. Roles are displayed with a title, date (right-aligned in monospace), company name in purple, and bullet points using an em dash (`—`) as a custom list marker.
+
+---
+
+### Education
+- **Design:** A single card row with the degree name and institution on the left, and a GPA badge on the right. The badge uses the purple accent color on a deep purple tint background, consistent with the tag styling.
+
+---
+
+### Certifications
+- **Design:** A stacked list of certification cards, each showing the certificate name, issuing organization, and date. Matches the card styling used in the education section for visual consistency.
+
+---
 
 ### Footer
-- **Design:** The footer is designed with a blue background just like the header of the web portfolio, with white text, centered alignment and with an email id attached to the hyper link, which, when clicked on it opens the mail app to send a mail.
-- **Mock-up Screenshot:**
-![Footer Mock-up](footer.png)
+- **Design:** A centered footer with a thin top border. Displays an availability status on the left (with an animated pulsing purple dot) and a copyright notice on the right. Both use the monospace font in a muted grey color.
 
-## **Conclusion**
-This design documentation outlines the key elements and choices made for portfolio project. The design system incorporates a consistent color palette of royal blue and crown yellow, creating a visually appealing and cohesive look. Typography choices are made for body text and headers/footers, providing readability and style.
-This documentation serves as a concise reference guide for the design system used in the portfolio project, aiming to facilitate development and maintain consistency in design throughout the project.
+---
 
-https://colorhunt.co/palette/000000f4dfc8f4eae0faf6f0
+## 5. Interactions & Animation
+
+- **Hover effects:** Skill chips, project cards, and navigation links all respond to hover with a purple border or color transition (`transition: 0.2s`).
+- **Pulsing dot:** The availability dot in the footer pulses using a CSS `@keyframes` animation that cycles opacity between `1` and `0.3` over 2.5 seconds.
+
+---
+
+## 6. Responsiveness
+
+The layout is fully responsive using:
+- `clamp()` for fluid font sizing on the hero heading.
+- CSS Grid with `auto-fit` and `minmax()` for skills and project cards.
+- `flex-wrap` on contact links and experience meta rows.
+- A `@media (max-width: 600px)` breakpoint that reduces font sizes and stacks flex items vertically.
+
+
+---
+
+## Conclusion
+
+This design documentation outlines the key decisions made for the portfolio. The system uses a dark monochrome base with a consistent purple accent to create a clean, developer-oriented aesthetic. Typography choices between Space Grotesk and Space Mono establish a clear visual hierarchy between readable content and technical labels. The single-file structure keeps the portfolio lightweight and easy to host anywhere.
