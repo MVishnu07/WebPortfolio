@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vishnu Malkapuram — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #0d0d0d;
+      color: #e8e6e0;
+      font-family: 'Space Grotesk', sans-serif;
+      min-height: 100vh;
+      padding: 0 0 4rem 0;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .mono { font-family: 'Space Mono', monospace; }
+
+    /* ── Hero ── */
+    .hero {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 3.5rem 2rem 2.5rem;
+      border-bottom: 0.5px solid #2a2a2a;
+    }
+
+    .hero-tag {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      color: #7C6FCD;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 600;
+      line-height: 1.1;
+      color: #f0ede6;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero h1 span { color: #7C6FCD; }
+
+    .hero-sub {
+      font-size: 14px;
+      color: #888;
+      max-width: 460px;
+      line-height: 1.7;
+      margin-top: 0.75rem;
+    }
+
+    .contact-row {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .contact-row a {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      color: #aaa;
+      letter-spacing: 0.05em;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.2s;
+    }
+
+    .contact-row a:hover { color: #7C6FCD; }
+
+    /* ── Sections ── */
+    .section {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 2.5rem 2rem 0;
+    }
+
+    .section-label {
+      font-family: 'Space Mono', monospace;
+      font-size: 10px;
+      color: #555;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 0.5px;
+      background: #222;
+    }
+
+    /* ── Skills ── */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 8px;
+    }
+
+    .skill-chip {
+      background: #161616;
+      border: 0.5px solid #2a2a2a;
+      border-radius: 4px;
+      padding: 8px 12px;
+      font-size: 12px;
+      color: #bbb;
+      font-family: 'Space Mono', monospace;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .skill-chip:hover {
+      border-color: #7C6FCD;
+      color: #c4bef5;
+    }
+
+    /* ── Projects ── */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 12px;
+    }
+
+    .project-card {
+      background: #111;
+      border: 0.5px solid #222;
+      border-radius: 8px;
+      padding: 1.25rem;
+      transition: border-color 0.2s;
+    }
+
+    .project-card:hover { border-color: #7C6FCD; }
+
+    .project-card h3 {
+      font-size: 14px;
+      font-weight: 500;
+      color: #e8e6e0;
+      margin-bottom: 0.5rem;
+    }
+
+    .project-card p {
+      font-size: 12.5px;
+      color: #aaa;
+      line-height: 1.65;
+      margin-bottom: 0.75rem;
+    }
+
+    .tag-row { display: flex; gap: 6px; flex-wrap: wrap; }
+
+    .tag {
+      font-family: 'Space Mono', monospace;
+      font-size: 10px;
+      color: #7C6FCD;
+      background: #1a1730;
+      border: 0.5px solid #2e2860;
+      padding: 3px 8px;
+      border-radius: 3px;
+    }
+
+    /* ── Experience ── */
+    .exp-list { display: flex; flex-direction: column; gap: 1.5rem; }
+
+    .exp-item {
+      border-left: 1px solid #222;
+      padding-left: 1.25rem;
+      position: relative;
+    }
+
+    .exp-item::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #7C6FCD;
+      position: absolute;
+      left: -3.5px;
+      top: 5px;
+    }
+
+    .exp-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 0.25rem;
+    }
+
+    .exp-title {
+      font-size: 13.5px;
+      font-weight: 500;
+      color: #e0ddd6;
+    }
+
+    .exp-date {
+      font-family: 'Space Mono', monospace;
+      font-size: 10px;
+      color: #555;
+      white-space: nowrap;
+    }
+
+    .exp-company {
+      font-size: 12px;
+      color: #7C6FCD;
+      margin-bottom: 0.5rem;
+    }
+
+    .exp-bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .exp-bullets li {
+      font-size: 12.5px;
+      color: #aaa;
+      line-height: 1.6;
+      padding-left: 1rem;
+      position: relative;
+    }
+
+    .exp-bullets li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: #333;
+    }
+
+    /* ── Education ── */
+    .edu-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+      flex-wrap: wrap;
+      padding: 1rem 1.25rem;
+      background: #111;
+      border: 0.5px solid #222;
+      border-radius: 8px;
+    }
+
+    .edu-name {
+      font-size: 13.5px;
+      font-weight: 500;
+      color: #e0ddd6;
+      margin-bottom: 0.25rem;
+    }
+
+    .edu-school { font-size: 12px; color: #aaa; }
+
+    .gpa-badge {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      color: #7C6FCD;
+      background: #1a1730;
+      border: 0.5px solid #2e2860;
+      padding: 4px 10px;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+
+    /* ── Certifications ── */
+    .cert-list { display: flex; flex-direction: column; gap: 8px; }
+
+    .cert-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+      flex-wrap: wrap;
+      padding: 0.85rem 1.25rem;
+      background: #111;
+      border: 0.5px solid #222;
+      border-radius: 8px;
+    }
+
+    .cert-name {
+      font-size: 13px;
+      font-weight: 500;
+      color: #e0ddd6;
+      margin-bottom: 0.2rem;
+    }
+
+    .cert-org { font-size: 12px; color: #aaa; }
+
+    .cert-date {
+      font-family: 'Space Mono', monospace;
+      font-size: 10px;
+      color: #555;
+      white-space: nowrap;
+      padding-top: 2px;
+    }
+
+    /* ── Footer ── */
+    .footer {
+      max-width: 860px;
+      margin: 3rem auto 0;
+      padding: 2rem 2rem 0;
+      border-top: 0.5px solid #1a1a1a;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer p {
+      font-family: 'Space Mono', monospace;
+      font-size: 10px;
+      color: #444;
+    }
+
+    .footer-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #7C6FCD;
+      display: inline-block;
+      margin-right: 6px;
+      animation: pulse 2.5s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 2rem; }
+      .contact-row { gap: 1rem; }
+      .exp-meta { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <p class="hero-tag mono">// portfolio</p>
+    <h1>Vishnu<br><span>Malkapuram</span></h1>
+    <p class="hero-sub">Business systems development student · Power BI · Data analytics · Full-stack · Ottawa, ON</p>
+    <div class="contact-row">
+      <a href="mailto:malk0014@algonquinlive.com"><i class="ti ti-mail"></i> malk0014@algonquinlive.com</a>
+      <a href="tel:3435586042"><i class="ti ti-phone"></i> 343-558-6042</a>
+      <a href="https://linkedin.com" target="_blank" rel="noopener"><i class="ti ti-brand-linkedin"></i> LinkedIn</a>
+      <a href="https://github.com" target="_blank" rel="noopener"><i class="ti ti-brand-github"></i> GitHub</a>
+      <a href="#" target="_blank" rel="noopener"><i class="ti ti-world"></i> Portfolio</a>
+    </div>
+  </div>
+
+  <div class="section">
+    <p class="section-label">Skills</p>
+    <div class="skills-grid">
+      <div class="skill-chip">Python</div>
+      <div class="skill-chip">SQL</div>
+      <div class="skill-chip">JavaScript</div>
+      <div class="skill-chip">HTML / CSS</div>
+      <div class="skill-chip">Node.js</div>
+      <div class="skill-chip">Power BI</div>
+      <div class="skill-chip">Tableau</div>
+      <div class="skill-chip">MySQL</div>
+      <div class="skill-chip">MS Excel</div>
+      <div class="skill-chip">SharePoint</div>
+      <div class="skill-chip">GitHub</div>
+      <div class="skill-chip">ServiceNow</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <p class="section-label">Projects</p>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3>Hospital Triage App</h3>
+        <p>Web app to track and prioritize ER patients by urgency, reducing manual triage work. Built with a scalable MySQL database for real-time patient and staff data.</p>
+        <div class="tag-row">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">MySQL</span>
+          <span class="tag">Node.js</span>
+        </div>
+      </div>
+      <div class="project-card">
+        <h3>Financial Behaviours &amp; Housing Analysis</h3>
+        <p>Analyzed 10,000+ survey records to uncover trends in housing and financial literacy. Built interactive Power BI dashboards to visualize key correlations.</p>
+        <div class="tag-row">
+          <span class="tag">Excel</span>
+          <span class="tag">MySQL</span>
+          <span class="tag">Power BI</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <p class="section-label">Experience</p>
+    <div class="exp-list">
+
+      <div class="exp-item">
+        <div class="exp-meta">
+          <span class="exp-title">Strategic Technology Initiatives Co-op</span>
+          <span class="exp-date">Sep 2025 – Dec 2025</span>
+        </div>
+        <p class="exp-company">Brookfield Renewable · Gatineau, QC</p>
+        <ul class="exp-bullets">
+          <li>Enhanced 7+ Power BI dashboards aligned with evolving business requirements, improving performance and data accuracy.</li>
+          <li>Led UAT across multiple systems and collaborated with developers to drive system enhancements.</li>
+          <li>Provided governance support, diagnosing and resolving issues to minimize downtime.</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-meta">
+          <span class="exp-title">Digital Insights Co-op</span>
+          <span class="exp-date">Jan 2025 – Apr 2025</span>
+        </div>
+        <p class="exp-company">Brookfield Renewable · Gatineau, QC</p>
+        <ul class="exp-bullets">
+          <li>Resolved 10+ Power BI issues, reducing dashboard update times by 25%.</li>
+          <li>Implemented Row-Level Security, reducing report complexity by 40% for 50+ users.</li>
+          <li>Managed Tableau Server Governance — access, licenses, and user troubleshooting.</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-meta">
+          <span class="exp-title">Amazon Fulfilment Associate</span>
+          <span class="exp-date">November 2022 - Present </span>
+        </div>
+        <p class="exp-company">Brookfield Renewable · Gatineau, QC</p>
+        <ul class="exp-bullets">
+          <li>Analyze package volume data to optimize staffing, trailer allocation, and loading priorities.</li>
+          <li>Inspected packages to identify and address potential issues, overseeing damage rectification processes to 
+          ensure compliance with quality standards and improve customer satisfaction. </li>
+          <li>Giving clear instructions and guidance to consistently achieve daily volume targets, fostering teamwork and 
+          enhancing collaboration.</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Education -->
+  <div class="section">
+    <p class="section-label">Education</p>
+    <div class="edu-row">
+      <div>
+        <p class="edu-name">B.Tech — Business Systems Development (Honours)</p>
+        <p class="edu-school">Algonquin College · Ottawa, ON · Sep 2022 – Present</p>
+      </div>
+      <span class="gpa-badge">GPA 3.64 / 4.00</span>
+    </div>
+  </div>
+
+  <!-- Certifications -->
+  <div class="section">
+    <p class="section-label">Certifications</p>
+    <div class="cert-list">
+      <div class="cert-item">
+        <div>
+          <p class="cert-name">Google Data Analytics Professional Certificate</p>
+          <p class="cert-org">Coursera</p>
+        </div>
+        <span class="cert-date">Jun – Aug 2024</span>
+      </div>
+      <div class="cert-item">
+        <div>
+          <p class="cert-name">Data Science with Artificial Intelligence</p>
+          <p class="cert-org">Upgrad Campus</p>
+        </div>
+        <span class="cert-date">Apr – Sep 2022</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p><span class="footer-dot"></span>Available for opportunities · Ottawa, ON</p>
+    <p>© 2026 Vishnu Malkapuram</p>
+  </div>
+
+</body>
+</html>
